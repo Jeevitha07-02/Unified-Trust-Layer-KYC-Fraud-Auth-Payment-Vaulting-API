@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Fraud Detection</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Fraud Detection System</h1>
+
+<input type="number" id="amount"
+placeholder="Enter Transaction Amount">
+
+<br><br>
+
+<button onclick="checkFraud()">
+Check Transaction
+</button>
+
+<br><br>
+
+<p id="result"></p>
+
+<br>
+
+<button onclick="window.location.href='dashboard.html'">
+Back to Dashboard
+</button>
+
+<script>
+
+function checkFraud() {
+
+var amount =
+document.getElementById("amount").value;
+
+if (amount == "") {
+
+alert("Please enter amount");
+
+}
+
+else if (amount > 10000) {
+
+document.getElementById("result").innerHTML =
+"⚠ Suspicious Transaction";
+
+}
+
+else {
+
+document.getElementById("result").innerHTML =
+"✅ Safe Transaction";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

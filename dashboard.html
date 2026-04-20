@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Welcome to Dashboard</h1>
+<p>Login Successful</p>
+
+<!-- ADD THESE BUTTONS HERE -->
+
+<button onclick="goToKYC()">KYC Verification</button>
+<button onclick="goToFraud()">Fraud Check</button>
+<button onclick="goToPayment()">Payment Vault</button>
+
+<br><br>
+
+<!-- Your existing logout button -->
+<button onclick="logout()">Logout</button>
+
+<script>
+
+function goToKYC() {
+    window.location.href = "kyc.html";
+}
+
+function goToFraud() {
+    window.location.href = "fraud.html";
+}
+
+function goToPayment() {
+    window.location.href = "payment.html";
+}
+
+function logout() {
+    window.location.href = "index.html";
+}
+
+</script>
+
+</body>
+
+</html>

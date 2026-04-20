@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Payment Vault</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Payment Vault</h1>
+
+<input type="text" id="card"
+placeholder="Enter Card Number">
+
+<br><br>
+
+<input type="text" id="cvv"
+placeholder="Enter CVV">
+
+<br><br>
+
+<button onclick="savePayment()">
+Save Payment
+</button>
+
+<br><br>
+
+<p id="paymentResult"></p>
+
+<br>
+
+<button onclick="window.location.href='dashboard.html'">
+Back to Dashboard
+</button>
+
+<script>
+
+function savePayment() {
+
+    var card =
+    document.getElementById("card").value;
+
+    var cvv =
+    document.getElementById("cvv").value;
+
+    if (card == "" || cvv == "") {
+        alert("Please fill all details");
+    }
+
+    else if (card.length != 16) {
+        document.getElementById("paymentResult")
+        .innerHTML = "❌ Invalid Card Number";
+    }
+
+    else if (cvv.length != 3) {
+        document.getElementById("paymentResult")
+        .innerHTML = "❌ Invalid CVV";
+    }
+
+    else {
+        document.getElementById("paymentResult")
+        .innerHTML = "✅ Payment Stored Securely";
+    }
+
+}
+
+</script>
+
+</body>
+</html>
